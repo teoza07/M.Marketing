@@ -3,24 +3,690 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - School App</title>
+    <title>CAPS Grade 12 Educational App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Welcome Back!</h2>
-        <form id="login-form">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>CAPS Grade 12 Learning Hub</h1>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <nav class="nav">
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                    <li><a href="#subjects" class="nav-link">Subjects</a></li>
+                    <li><a href="#progress" class="nav-link">Progress</a></li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="container">
+                <h2>Welcome to Your Grade 12 CAPS Learning Journey</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-book"></i>
+                        <h3>7</h3>
+                        <p>Subjects Available</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-tasks"></i>
+                        <h3>42</h3>
+                        <p>Topics to Master</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>0%</h3>
+                        <p>Completion Rate</p>
+                    </div>
+                </div>
+                
+                <div class="quick-access">
+                    <h3>Quick Access to Subjects</h3>
+                    <div class="subject-grid">
+                        <div class="subject-card" data-subject="mathematics">
+                            <i class="fas fa-calculator"></i>
+                            <h4>Mathematics</h4>
+                            <p>Pure Mathematics - Advanced concepts</p>
+                        </div>
+                        <div class="subject-card" data-subject="math-literacy">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Mathematics Literacy</h4>
+                            <p>Practical mathematical applications</p>
+                        </div>
+                        <div class="subject-card" data-subject="life-science">
+                            <i class="fas fa-microscope"></i>
+                            <h4>Life Science</h4>
+                            <p>Biology and life processes</p>
+                        </div>
+                        <div class="subject-card" data-subject="accounting">
+                            <i class="fas fa-coins"></i>
+                            <h4>Accounting</h4>
+                            <p>Financial management and reporting</p>
+                        </div>
+                        <div class="subject-card" data-subject="business-studies">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Business Studies</h4>
+                            <p>Business principles and management</p>
+                        </div>
+                        <div class="subject-card" data-subject="history">
+                            <i class="fas fa-landmark"></i>
+                            <h4>History</h4>
+                            <p>South African and world history</p>
+                        </div>
+                        <div class="subject-card" data-subject="economics">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Economics</h4>
+                            <p>Economic principles and systems</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+        </section>
+
+        <!-- Subjects Section -->
+        <section id="subjects" class="section">
+            <div class="container">
+                <h2>CAPS Grade 12 Subjects</h2>
+                <div class="subjects-container">
+                    <!-- Mathematics -->
+                    <div class="subject-detail" id="mathematics">
+                        <div class="subject-header">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Mathematics</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Functions</h4>
+                                    <ul>
+                                        <li>Exponential functions</li>
+                                        <li>Logarithmic functions</li>
+                                        <li>Trigonometric functions</li>
+                                        <li>Polynomial functions</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Calculus</h4>
+                                    <ul>
+                                        <li>Limits and continuity</li>
+                                        <li>Differentiation</li>
+                                        <li>Applications of derivatives</li>
+                                        <li>Integration basics</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Algebra</h4>
+                                    <ul>
+                                        <li>Sequences and series</li>
+                                        <li>Inequalities</li>
+                                        <li>Complex numbers</li>
+                                        <li>Matrices</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Geometry</h4>
+                                    <ul>
+                                        <li>Analytical geometry</li>
+                                        <li>Euclidean geometry</li>
+                                        <li>Trigonometry</li>
+                                        <li>3D geometry</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Statistics</h4>
+                                    <ul>
+                                        <li>Data analysis</li>
+                                        <li>Probability</li>
+                                        <li>Normal distribution</li>
+                                        <li>Regression analysis</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Financial Mathematics</h4>
+                                    <ul>
+                                        <li>Simple and compound interest</li>
+                                        <li>Annuities</li>
+                                        <li>Loan calculations</li>
+                                        <li>Investment analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mathematics Literacy -->
+                    <div class="subject-detail" id="math-literacy">
+                        <div class="subject-header">
+                            <i class="fas fa-chart-bar"></i>
+                            <h3>Mathematics Literacy</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Numbers and Operations</h4>
+                                    <ul>
+                                        <li>Estimation and calculation</li>
+                                        <li>Ratio and proportion</li>
+                                        <li>Percentages</li>
+                                        <li>Interest calculations</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Patterns and Relationships</h4>
+                                    <ul>
+                                        <li>Linear relationships</li>
+                                        <li>Exponential relationships</li>
+                                        <li>Graphs and tables</li>
+                                        <li>Formulae</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Shape and Space</h4>
+                                    <ul>
+                                        <li>2D and 3D objects</li>
+                                        <li>Measurement</li>
+                                        <li>Maps and plans</li>
+                                        <li>Scale and ratio</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Data Handling</h4>
+                                    <ul>
+                                        <li>Data collection</li>
+                                        <li>Data representation</li>
+                                        <li>Data analysis</li>
+                                        <li>Probability</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Finance</h4>
+                                    <ul>
+                                        <li>Personal finance</li>
+                                        <li>Taxation</li>
+                                        <li>Loans and investments</li>
+                                        <li>Exchange rates</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Measurement</h4>
+                                    <ul>
+                                        <li>Length, area, volume</li>
+                                        <li>Time and temperature</li>
+                                        <li>Mass and capacity</li>
+                                        <li>Currency conversions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Life Science -->
+                    <div class="subject-detail" id="life-science">
+                        <div class="subject-header">
+                            <i class="fas fa-microscope"></i>
+                            <h3>Life Science</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Life at Molecular Level</h4>
+                                    <ul>
+                                        <li>Organic compounds</li>
+                                        <li>Inorganic compounds</li>
+                                        <li>Cell structure and function</li>
+                                        <li>Cell division</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Life Processes in Plants</h4>
+                                    <ul>
+                                        <li>Photosynthesis</li>
+                                        <li>Plant nutrition</li>
+                                        <li>Transport in plants</li>
+                                        <li>Gas exchange</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Life Processes in Animals</h4>
+                                    <ul>
+                                        <li>Animal nutrition</li>
+                                        <li>Transport systems</li>
+                                        <li>Gas exchange and excretion</li>
+                                        <li>Support and movement</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Reproduction</h4>
+                                    <ul>
+                                        <li>Asexual reproduction</li>
+                                        <li>Sexual reproduction</li>
+                                        <li>Human reproduction</li>
+                                        <li>Population dynamics</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Genetics and Inheritance</h4>
+                                    <ul>
+                                        <li>DNA and RNA</li>
+                                        <li>Protein synthesis</li>
+                                        <li>Meiosis and genetic variation</li>
+                                        <li>Inheritance patterns</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Responding to Environment</h4>
+                                    <ul>
+                                        <li>Nervous system</li>
+                                        <li>Endocrine system</li>
+                                        <li>Homeostasis</li>
+                                        <li>Human impact on environment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accounting -->
+                    <div class="subject-detail" id="accounting">
+                        <div class="subject-header">
+                            <i class="fas fa-coins"></i>
+                            <h3>Accounting</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Accounting Concepts</h4>
+                                    <ul>
+                                        <li>Accounting equation</li>
+                                        <li>Generally Accepted Accounting Practice</li>
+                                        <li>Accounting cycle</li>
+                                        <li>Source documents</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Financial Statements</h4>
+                                    <ul>
+                                        <li>Income statement</li>
+                                        <li>Balance sheet</li>
+                                        <li>Cash flow statement</li>
+                                        <li>Statement of changes in equity</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Fixed Assets</h4>
+                                    <ul>
+                                        <li>Acquisition of fixed assets</li>
+                                        <li>Depreciation methods</li>
+                                        <li>Disposal of fixed assets</li>
+                                        <li>Asset register</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Inventory</h4>
+                                    <ul>
+                                        <li>Periodic inventory system</li>
+                                        <li>Perpetual inventory system</li>
+                                        <li>Cost of sales calculation</li>
+                                        <li>Stock valuation methods</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Debtors and Creditors</h4>
+                                    <ul>
+                                        <li>Control accounts</li>
+                                        <li>Age analysis</li>
+                                        <li>Provision for bad debts</li>
+                                        <li>Reconciliations</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Bank Reconciliation</h4>
+                                    <ul>
+                                        <li>Bank statement analysis</li>
+                                        <li>Outstanding deposits</li>
+                                        <li>Unpresented cheques</li>
+                                        <li>Bank charges and interest</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Studies -->
+                    <div class="subject-detail" id="business-studies">
+                        <div class="subject-header">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Business Studies</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Business Environments</h4>
+                                    <ul>
+                                        <li>Micro environment</li>
+                                        <li>Market environment</li>
+                                        <li>Macro environment</li>
+                                        <li>Contemporary socio-economic issues</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Business Operations</h4>
+                                    <ul>
+                                        <li>Production planning</li>
+                                        <li>Quality control</li>
+                                        <li>Supply chain management</li>
+                                        <li>Operations management</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Business Ventures</h4>
+                                    <ul>
+                                        <li>Forms of ownership</li>
+                                        <li>Investment opportunities</li>
+                                        <li>Business plan development</li>
+                                        <li>Presentation of business information</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Human Resources</h4>
+                                    <ul>
+                                        <li>Recruitment and selection</li>
+                                        <li>Training and development</li>
+                                        <li>Performance management</li>
+                                        <li>Employment relations</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Marketing</h4>
+                                    <ul>
+                                        <li>Marketing mix</li>
+                                        <li>Market research</li>
+                                        <li>Product life cycle</li>
+                                        <li>Promotional strategies</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Financial Management</h4>
+                                    <ul>
+                                        <li>Sources of finance</li>
+                                        <li>Financial planning</li>
+                                        <li>Investment appraisal</li>
+                                        <li>Financial statements analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History -->
+                    <div class="subject-detail" id="history">
+                        <div class="subject-header">
+                            <i class="fas fa-landmark"></i>
+                            <h3>History</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Cold War</h4>
+                                    <ul>
+                                        <li>Origins of the Cold War</li>
+                                        <li>Cold War crises</li>
+                                        <li>End of the Cold War</li>
+                                        <li>Impact on developing world</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Independent Africa</h4>
+                                    <ul>
+                                        <li>Decolonisation process</li>
+                                        <li>Case studies: Ghana, DRC, Tanzania</li>
+                                        <li>Challenges of independence</li>
+                                        <li>Pan-Africanism</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Civil Rights Movement</h4>
+                                    <ul>
+                                        <li>Background to civil rights</li>
+                                        <li>Key events and figures</li>
+                                        <li>Strategies and tactics</li>
+                                        <li>Impact and legacy</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Apartheid South Africa</h4>
+                                    <ul>
+                                        <li>Rise of apartheid</li>
+                                        <li>Apartheid policies</li>
+                                        <li>Resistance movements</li>
+                                        <li>International responses</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Coming of Democracy</h4>
+                                    <ul>
+                                        <li>Negotiations process</li>
+                                        <li>Key role players</li>
+                                        <li>Democratic transition</li>
+                                        <li>Challenges of democracy</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Skills Development</h4>
+                                    <ul>
+                                        <li>Source analysis</li>
+                                        <li>Historical interpretation</li>
+                                        <li>Essay writing</li>
+                                        <li>Research methodology</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Economics -->
+                    <div class="subject-detail" id="economics">
+                        <div class="subject-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Economics</h3>
+                        </div>
+                        <div class="subject-content">
+                            <div class="topics-grid">
+                                <div class="topic-card">
+                                    <h4>Microeconomics</h4>
+                                    <ul>
+                                        <li>Markets</li>
+                                        <li>Price theory</li>
+                                        <li>Demand and supply</li>
+                                        <li>Market failures</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Economic Systems</h4>
+                                    <ul>
+                                        <li>Mixed economy</li>
+                                        <li>Market economy</li>
+                                        <li>Command economy</li>
+                                        <li>Traditional economy</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Macroeconomics</h4>
+                                    <ul>
+                                        <li>Business cycles</li>
+                                        <li>Inflation</li>
+                                        <li>Unemployment</li>
+                                        <li>Economic growth</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Economic Pursuits</h4>
+                                    <ul>
+                                        <li>Redressing past imbalances</li>
+                                        <li>Growth and development</li>
+                                        <li>Regional development</li>
+                                        <li>Industrial development</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Money and Banking</h4>
+                                    <ul>
+                                        <li>Functions of money</li>
+                                        <li>South African Reserve Bank</li>
+                                        <li>Commercial banks</li>
+                                        <li>Monetary policy</li>
+                                    </ul>
+                                </div>
+                                <div class="topic-card">
+                                    <h4>Public Finance</h4>
+                                    <ul>
+                                        <li>Government budget</li>
+                                        <li>Fiscal policy</li>
+                                        <li>Public debt</li>
+                                        <li>Taxation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="section">
+            <div class="container">
+                <h2>Your Learning Progress</h2>
+                <div class="progress-overview">
+                    <div class="progress-card">
+                        <h3>Overall Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <p>0% Complete</p>
+                    </div>
+                </div>
+                
+                <div class="subject-progress">
+                    <div class="progress-item">
+                        <span class="subject-name">Mathematics</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="subject-name">Mathematics Literacy</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="subject-name">Life Science</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="subject-name">Accounting</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="subject-name">Business Studies</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="subject-name">History</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="subject-name">Economics</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <div class="container">
+                <h2>Learning Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Study Guides</h3>
+                        <p>Comprehensive CAPS-aligned study materials for all subjects</p>
+                        <button class="btn">Access Guides</button>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Lessons</h3>
+                        <p>Interactive video content explaining key concepts</p>
+                        <button class="btn">Watch Videos</button>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Practice Tests</h3>
+                        <p>Mock exams and practice questions for assessment preparation</p>
+                        <button class="btn">Take Tests</button>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Study Groups</h3>
+                        <p>Connect with peers for collaborative learning</p>
+                        <button class="btn">Join Groups</button>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Study Planner</h3>
+                        <p>Organize your study schedule and track deadlines</p>
+                        <button class="btn">Plan Studies</button>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Help Center</h3>
+                        <p>Get support and answers to your questions</p>
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CAPS Grade 12 Learning Hub. Supporting South African learners in their educational journey.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
